@@ -1,0 +1,230 @@
+@import "variables";
+@import "fuentes";
+@import "tamanoletras";
+
+h1, h2, h3, h4 {
+  color: $colortexto-principal;
+  font-size: $tamtitulos;
+}
+
+@for $i from 1 through 5 {
+  .titiulosprincipales#{$i} { font-size: 30px * $i; }
+}
+
+@mixin bordesgeneral ($borderstyle, $border-color) {
+  border-style: double;
+  border-color: $colortexto-principal;
+}
+
+.bordecomun {
+  @include bordesgeneral(double, $colortexto-principal);
+}
+
+.probandosass__texto {
+  @include bordesgeneral(double, $colortexto-principal);
+}
+
+
+.efa__texto {
+  color: $colortexto-principal;
+  font-size: $tamcontenidos;
+  font-family: $fuente-cursiva;
+  color: $colortexto-principal;
+}
+
+.tituloprincipal {  
+  font-size: $letragrande;
+}
+
+body {
+  background-image: $fondoprincipal;
+}
+  
+header, a {
+  color: $colortexto-principal;
+  font-style: normal;
+  font-weight: bold;
+}  
+  
+.item1:hover {
+  transition: 3s;
+  font-size: 3rem;  
+}
+  
+h1 {
+  font-family: $fuente-cursiva;
+  text-align: center;
+  @include bordesgeneral(double, $colortexto-principal);
+  font-style: normal;
+  font-weight: bold;
+}
+  
+h2 {
+  text-align: center;
+  border-style: double;
+  border-color: $colortexto-principal;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+  
+h3 {
+  text-align: center;
+  border-style: double;
+  border-color: $colortexto-principal;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+  
+h4 {
+  text-align: center;
+  border-style: double;
+  border-color: $colortexto-principal;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+  
+h5 {
+  color: #919191;
+  text-align: center;
+  border-style: double;
+  border-color: #0f3e85;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+
+ul li {
+  list-style-type: square;
+  color: rgb(212, 206, 196);
+  font-style: normal;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+}
+
+table, th, td {
+  color: rgb(120, 175, 192);
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'Bebas Neue';
+  border: 2px solid #ff8800;
+  text-align: left;
+  font-size: medium;
+  }
+
+th {
+color: rgb(120, 175, 192);
+font-style: normal;
+font-weight: bold;
+font-family: 'Bebas Neue';
+border: 2px solid #ff8800;
+text-align: center;
+}
+
+label {
+color: rgb(255, 255, 255);
+font-style: normal;
+font-weight: bold;
+font-family: 'Bebas Neue';
+}
+
+tr:hover 
+
+.item3pagconvertite--boton {
+background-color: #0077ff;
+}
+
+.item3__interno--boton {
+background-color: #ff8800;
+}
+
+.container {
+width: 500px;
+margin: 100px;
+padding: auto;
+}
+
+.redes {
+width: 500px;
+margin: 100px;
+padding: auto;
+}
+
+.fotosobreredes {
+width: 500px;
+margin: 50px;
+}
+
+.item3pagsocial__flex-container {
+height: 200px;
+width: 200px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+flex-flow: column;
+justify-content: space-between;
+align-items: initial;
+align-content: flex-start;
+order: initial;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;    
+  background-image: linear-gradient(to top orange, white);
+  grid-area: auto;
+  border: 10px solid #cddbf3;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.item3pagquienes--texto {
+color: $colorazulcopado;
+background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 166, 0));
+}
+
+.item3pagcontacto--texto {
+color: $colorazulcopado;
+}
+
+.textoplantilla {
+  color: $colorazulcopado;
+}
+
+.canchagrid__texto {
+  color: $colorazulcopado;
+}
+
+
+.item2:hover {
+  transition: 3s;
+  font-size: 3rem;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+        
+.contenedorgridprincipal {
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+  'menu main main main right right'
+  'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  padding: 10px;
+}
+        
+.contenedorgridprincipal > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
